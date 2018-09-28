@@ -142,6 +142,7 @@ export default Kapsule({
     onNodeHover: { default: () => {}, triggerUpdate: false },
     onLinkClick: { default: () => {}, triggerUpdate: false },
     onLinkHover: { default: () => {}, triggerUpdate: false },
+    onCanvasClick: { default: () => {}, triggerUpdate: false },
     ...linkedProps
   },
 
@@ -374,6 +375,8 @@ export default Kapsule({
     container.addEventListener("click", ev => {
       if (state.hoverObj) {
         state[`on${state.hoverObj.type}Click`](state.hoverObj.d);
+      } else {
+        state[`onCanvasClick`](mousePos);
       }
     }, false);
 
