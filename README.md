@@ -118,6 +118,7 @@ myGraph(<myDOMElement>)
 ### Interaction
 | Method | Description | Default |
 | --- | --- | :--: |
+| <b>onCanvasClick</b>(<i>fn</i>) | Callback function for canvas clicks. The position relative to the canvas is included as a single argument `onCanvasClick({x, y})`. | - |
 | <b>onNodeClick</b>(<i>fn</i>) | Callback function for node clicks. The node object is included as single argument `onNodeClick(node)`. | - |
 | <b>onNodeHover</b>(<i>fn</i>) | Callback function for node mouse over events. The node object (or `null` if there's no node under the mouse line of sight) is included as the first argument, and the previous node object (or null) as second argument: `onNodeHover(node, prevNode)`. | - |
 | <b>onNodeDrag</b>(<i>fn</i>) | Callback function for node drag interactions. This function is invoked repeatedly while dragging a node, every time its position is updated. The node object is included as single argument `onNodeDrag(node)`. | - |
